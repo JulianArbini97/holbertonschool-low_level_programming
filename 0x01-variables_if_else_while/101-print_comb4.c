@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 /**
+ * main - function that display the numbers
  *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
