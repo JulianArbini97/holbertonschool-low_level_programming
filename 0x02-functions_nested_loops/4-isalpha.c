@@ -5,12 +5,12 @@
  *
  * Return: Always 0.
  */
-int _islower(int c)
+int _isalpha(int c)
 {
-  if (c >= 'a' && c <= 'z')
+  if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
     {
       return (1);
-}
-  else 
+    }
+  else
     return (0);
 }
