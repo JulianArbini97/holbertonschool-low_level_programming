@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * times_table - check the code for Holberton School students.
  *
  * Return: Always 0.
  */
