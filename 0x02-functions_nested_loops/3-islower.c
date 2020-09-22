@@ -3,7 +3,7 @@
 /**
  * _islower - check the code for Holberton School students.
  *
- * int 'c - is a local variable
+ * @c: variable
  *
  * Return: Always 0.
  */
