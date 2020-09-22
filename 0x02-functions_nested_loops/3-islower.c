@@ -1,7 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * _islower - check the code for Holberton School students.
+ *
+ * int 'c - is a local variable
  *
  * Return: Always 0.
  */
