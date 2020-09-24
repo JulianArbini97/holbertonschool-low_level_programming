@@ -1,4 +1,4 @@
-B#include "holberton.h"
+#include "holberton.h"
 
 /**
  * more_numbers - check the code for Holberton School students.
