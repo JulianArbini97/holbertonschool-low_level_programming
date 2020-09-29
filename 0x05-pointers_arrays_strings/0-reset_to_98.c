@@ -9,6 +9,5 @@ B#include "holberton.h"
 void reset_to_98(int *n)
 {
 int p = *n; /*Defino la variable con su puntero */
-p = 98; /*Valor de la variable p */
-*n = p; /*Redefino el valor del puntero */
+*n = 98; /*Valor de la variable p */
 }
