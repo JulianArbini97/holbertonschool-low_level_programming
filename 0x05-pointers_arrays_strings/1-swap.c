@@ -2,18 +2,17 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
+ * swap_int - check the code for Holberton School students.
+ * @a: Puntero
+ * @b: Puntero
  * Return: Always 0.
  */
 void swap_int(int *a, int *b)
 {
-  int q = *a;
-  int w = *b;
-
-  q = 98;
-  w = 42;
-
-  *a = w;
-  *b = q;
+int q = *a; /*Defino las variables con sus respectivos punteros */
+int w = *b;
+q = 98; /* Se le da el valor a la variable */
+w = 42;
+*a = w; /* Intercambio el valor de las variables con nuevos punteros */
+*b = q;
 }

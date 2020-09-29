@@ -1,14 +1,14 @@
-#include "holberton.h"
+B#include "holberton.h"
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
+ * reset_to_98 - check the code for Holberton School students.
+ * @n: var
  * Return: Always 0.
  */
 void reset_to_98(int *n)
 {
-  int p = *n;
-  p = 98;
-  *n = p;
+int p = *n; /*Defino la variable con su puntero */
+p = 98; /*Valor de la variable p */
+*n = p; /*Redefino el valor del puntero */
 }
