@@ -1,19 +1,18 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * print_rev - check the code for Holberton School students.
+ * @s: Puntero
  * Return: Always 0.
  */
 void print_rev(char *s)
 {
-  int i = 0;
-
-  while (*(s + i) != 0)
-      i++;
-      for (i = i - 1; i >= 0; i--)
-	{
-	  _putchar(*(s + i));
-	}
-      _putchar(10);
-    }
+int i = 0;
+while (*(s + i) != 0)
+i++;
+for (i = i - 1; i >= 0; i--)
+{
+_putchar(*(s + i));
+}
+_putchar(10);
+}
