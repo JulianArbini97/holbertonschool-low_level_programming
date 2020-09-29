@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include <string.h>
-
 /**
  * rev_string - check the code for Holberton School students.
  * @s: Puntero
@@ -8,9 +6,13 @@
  */
 void rev_string(char *s)
 {
-int x = strlen(s) - 1;
+int x = 0;
 int y = 0;
 char z;
+while (s[x] != '\0')
+x++;
+
+x -= 1;
 while (y < x)
 {
 z = s[y];
