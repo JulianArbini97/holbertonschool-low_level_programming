@@ -1,0 +1,29 @@
+#include "holberton.h"
+#include <stdio.h>
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+char *_strcat(char *dest, char *src)
+{
+  int n, temp;
+
+  // store length of s1 in the length variable
+  n = 0;
+  while (dest[n] != '\0') {
+    ++n;
+  }
+
+  // concatenate s2 to s1
+  for (temp = 0; src[temp] != '\0'; ++temp, ++n) {
+    dest[n] = src[temp];
+  }
+
+  // terminating the s1 string
+  dest[n] = '\0';
+
+  return (dest);
+
+}
