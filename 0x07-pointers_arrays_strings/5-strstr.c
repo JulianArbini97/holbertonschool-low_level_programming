@@ -1,4 +1,4 @@
-#include "holberton.h"
+B#include "holberton.h"
 #include <stdio.h>
 
 /**
@@ -9,18 +9,18 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-int a = 0;
-while (*haystack != 0)
+while (*haystack)
 {
-if (*haystack == *needle)
+char *Begin = haystack;
+char *pattern = needle;
+while (*haystack && *pattern && *haystack == *pattern)
 {
-a = 1;
-break;
-}
 haystack++;
+pattern++;
 }
-if (a != 0)
-return (haystack);
-else
-return (0);
+if (!*pattern)
+return (Begin);
+haystack = Begin + 1;
+}
+return (NULL);
 }
