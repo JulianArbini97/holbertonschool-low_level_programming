@@ -1,21 +1,20 @@
-#include "holberton.h"
+B#include "holberton.h"
 #include <stdio.h>
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
- *
+ * _memset - prints buffer in hexa
+ * @s: the address of memory to print
+ * @b: the size of the memory to print
+ * @n: var
  * Return: Nothing.
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-  unsigned int a = 0;
-
-  while (a < n)
-    {
-      *(s+a) = b;
-      a++;
-    }
-  return (s);
+unsigned int a = 0;
+while (a < n)
+{
+*(s + a) = b;
+a++;
+}
+return (s);
 }
