@@ -22,5 +22,5 @@ s++;
 if (a != 0)
 return (s);
 else
-return (0);
+return (NULL);
 }
