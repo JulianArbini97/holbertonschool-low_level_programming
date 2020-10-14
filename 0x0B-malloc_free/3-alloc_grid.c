@@ -11,29 +11,29 @@
  */
 int **alloc_grid(int width, int height)
 {
-int **puntero;
+int **grid;
 int i, j;
 if (width <= 0 || height <= 0)
 {
 return (NULL);
 }
-puntero = malloc(sizeof(int *) * height);
-if (puntero == NULL)
+grid = malloc(sizeof(int *) * height);
+if (grid == NULL)
 return ('\0');
 for (i = 0; i < height; i++)
 {
-puntero[i] = malloc(sizeof(int) * width);
-if (puntero[i] == NULL)
+grid[i] = malloc(sizeof(int) * width);
+if (grid[i] == NULL)
 {
 for (i = i - 1; i >= 0; i--)
 {
-free(puntero[i]);
+free(grid[i]);
 }
-free(puntero);
+free(grid);
 return (NULL);
 }
 }
 for (i = 0; j < width; j++)
-puntero[i][j] = 0;
-return (puntero);
+grid[i][j] = 0;
+return (grid);
 }
