@@ -3,7 +3,6 @@
 #include <stdlib.h>
 
 /**
- * main - check the code for Holberton School students.
  * _strlen - returns the length of a string
  * @s: string s
  * Return: length of string
