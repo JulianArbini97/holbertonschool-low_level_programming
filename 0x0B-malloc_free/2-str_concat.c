@@ -37,5 +37,6 @@ for (j = i; j < b + i; j++)
 {
 p[j] = s2[j - i];
 }
+p[i + j + 1] = '\0'
 return (p);
 }
