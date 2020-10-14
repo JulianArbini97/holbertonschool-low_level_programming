@@ -18,7 +18,7 @@ if (size == 0)
 {
 return (NULL);
 }
-p= (char *) malloc(size);
+p = (char *) malloc(size);
 if (p == NULL)
 return (NULL);
 for (a = 0; a < size; a++)
