@@ -1,4 +1,4 @@
-B#include "holberton.h"
+#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -11,6 +11,11 @@ char *_strdup(char *str)
 {
 int a = 0, b = 0;
 char *s;
+
+if (str == NULL)
+{
+return (NULL);
+}
 while (str[a] != 0)
 {
 a++;
