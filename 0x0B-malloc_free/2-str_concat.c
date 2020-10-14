@@ -14,13 +14,13 @@ char *p;
 int a = 0, b = 0, i = 0, j = 0;
 if (s1 == NULL)
 {
-return ('\0');
+return (" ");
 }
 while (s1[a] != 0)
 a++;
 if (s2 == NULL)
 {
-return ('\0');
+return (" ");
 }
 while (s2[b] != 0)
 b++;
