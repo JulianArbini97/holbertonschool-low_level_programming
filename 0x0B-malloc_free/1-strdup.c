@@ -25,6 +25,10 @@ if (a == 0)
 return (NULL);
 }
 s = (char *)malloc(sizeof(char) * a);
+if (s == NULL)
+{
+return (NULL);
+}
 for (b = 0; b < a; b++)
 {
 s[b] = str[b];
