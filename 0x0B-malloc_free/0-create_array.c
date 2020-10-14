@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * create_array - funcion
+ * create_array - function
  * @c: the address of memory to print
  * @size: the size of the memory to print
  *
