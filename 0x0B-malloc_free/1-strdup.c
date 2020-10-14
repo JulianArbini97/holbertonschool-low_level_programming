@@ -20,7 +20,7 @@ while (str[a] != 0)
 {
 a++;
 }
-s = (char *)malloc(sizeof(char) * a);
+s = (char *)malloc(sizeof(char) * a + 1);
 if (s == NULL)
 {
 return (NULL);
