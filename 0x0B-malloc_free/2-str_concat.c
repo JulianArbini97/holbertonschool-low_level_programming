@@ -33,7 +33,7 @@ for (i = 0; i < a; i++)
 {
 p[i] = s1[i];
 }
-for (j = i; j < b + i; j++)
+for (j = i; j < b + i + 1; j++)
 {
 p[j] = s2[j - i];
 }
