@@ -18,7 +18,9 @@ if (size == 0)
 {
 return (NULL);
 }
-p = (char *)malloc(size);
+if (p == NULL)
+return (NULL);
+p = (char *) malloc(size);
 for (a = 0; a < size; a++)
 p[a] = c;
 return (p);
