@@ -24,7 +24,7 @@ return ('\0');
 }
 while (s2[b] != 0)
 b++;
-p = (char *) malloc(sizeof(char) * (a + b + 2));
+p = (char *) malloc(sizeof(char) * (a + b + 1));
 if (p == NULL)
 {
 return (NULL);
@@ -33,7 +33,7 @@ for (i = 0; i < a; i++)
 {
 p[i] = s1[i];
 }
-for (j = i; j < b + i + 1; j++)
+for (j = i; j < b + i; j++)
 {
 p[j] = s2[j - i];
 }
