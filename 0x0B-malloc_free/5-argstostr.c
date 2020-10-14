@@ -10,12 +10,10 @@
  */
 int _strlen(char *s)
 {
-  int i = 0;
-
-  while (*s++)
-    i++;
-
-  return (i);
+int i = 0;
+while (*s++)
+i++;
+return (i);
 }
 
 /**
@@ -45,7 +43,7 @@ return (NULL);
 for (i = 0; i < ac; i++)
 {
 length = _strlen(av[i]);
-for (j = 0; j < len; j++, m++)
+for (j = 0; j < length; j++, m++)
 {
 p[m] = av[i][j];
 }
