@@ -1,4 +1,4 @@
-#include "holberton.h"
+B#include "holberton.h"
 #include <stdlib.h>
 
 /**
@@ -14,9 +14,9 @@ int *p;
 int a;
 if (min > max)
 {
-return(0);
+return (0);
 }
-p = malloc (sizeof(int) * (max - min + 1));
+p = malloc(sizeof(int) * (max - min + 1));
 if (!p)
 return (0);
 for (a = 0; min <= max; min++, a++)
