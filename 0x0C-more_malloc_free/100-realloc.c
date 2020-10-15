@@ -22,7 +22,7 @@ if (p == NULL)
 return (NULL);
 return (p);
 }
-if (new_size == 0
+ if (new_size == 0)
 {
 free(ptr);
 return (NULL);
