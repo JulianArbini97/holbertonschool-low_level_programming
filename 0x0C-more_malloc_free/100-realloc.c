@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "holberton.h"
+
 /**
  * _realloc - reasing a memory to a pointer
  * @ptr: pointer
@@ -7,6 +8,7 @@
  * @new_size: new size
  * Return: the new array with new size
  */
+
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 char *p;
