@@ -22,7 +22,7 @@ return (NULL);
 ptr = malloc(nmemb * size);
 if (ptr == NULL)
 return (NULL);
-for (a = 0; a <= nmemb * size; a++)
+for (a = 0; a < nmemb * size; a++)
 {
 ((char *)ptr)[a] = 0;
 }
