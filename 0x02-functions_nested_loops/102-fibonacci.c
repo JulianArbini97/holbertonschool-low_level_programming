@@ -2,29 +2,24 @@
 #include <stdio.h>
 
 /**
- * printFibonacciNumbers - check the code for Holberton School students.
+ * main - check the code for Holberton School students.
  *
  * Return: Always 0.
  */
-void printFibonacciNumbers(int n)
+
+int main(void)
 {
-// Driver Code
-int main()
+int count;
+long int a = 0, b = 1, c;
+for (count = 0; count < 50; count++)
 {
-printFibonacciNumbers(50);
-return 0;
+c = a + b;
+printf("%ld", c);
+a = b;
+b = c;
+if (count != 49)
+printf(", ");
 }
-
-int f1 = 0, f2 = 1, i;
-
-if (n < 1)
-return;
-
-for (i = 1; i <= n; i++)
-{
-cout<<f2<<" ";
-int next = f1 + f2;
-f1 = f2;
-f2 = next;
-}
+printf("\n");
+return (0);
 }
