@@ -22,28 +22,22 @@ return (b);
  * Return: Pointer.
  */
 
-char *_strdup(char *str)
+char*_strdup(char *str)
 {
-int a = 0, b = 0;
-char *s;
-if (str == 0)
-{
+char *new_str;
+int i = 0;
+if (str == NULL)
 return (NULL);
-}
-while (str[a] != 0)
-{
-a++;
-}
-s = (char *)malloc(sizeof(char) * a + 1);
-if (s == NULL)
-{
+new_str = malloc(sizeof(char) * _strlen(str) + 1);
+if (!new_str)
 return (NULL);
-}
-for (b = 0; b < a; b++)
+while (str[i])
 {
-s[b] = str[b];
+new_str[i] = str[i];
+i++;
 }
-return (s);
+new_str[i] = '\0';
+return (new_str);
 }
 
 /**
