@@ -1,4 +1,4 @@
-#include "dog.h"
+B#include "dog.h"
 
 /**
  * _strlen - check the code for Holberton School students.
@@ -22,7 +22,7 @@ return (b);
  * Return: Pointer.
  */
 
-char*_strdup(char *str)
+char *_strdup(char *str)
 {
 char *new_str;
 int i = 0;
