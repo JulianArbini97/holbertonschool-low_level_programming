@@ -1,4 +1,4 @@
-B#include "dog.h"
+#include "dog.h"
 
 /**
  * _strlen - check the code for Holberton School students.
