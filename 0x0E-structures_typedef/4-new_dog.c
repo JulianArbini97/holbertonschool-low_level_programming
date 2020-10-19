@@ -2,7 +2,7 @@
 
 /**
  * _strlen - check the code for Holberton School students.
- * @s: Puntero
+ * @str: Pointer
  * Return: Always 0.
  */
 
@@ -19,7 +19,7 @@ return (b);
 /**
  * _strdup - check the code for Holberton School students.
  * @str: punt
- * Return: Always 0.
+ * Return: Pointer.
  */
 
 char *_strdup(char *str)
@@ -46,30 +46,36 @@ s[b] = str[b];
 return (s);
 }
 
+/**
+ * new_dog - creates a new dog
+ *
+ * @name: name
+ * @age: age
+ * @owner: owner
+ *
+ * Return: the newly created dog
+ */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
-  dog_t *dog;
-
-  dog = malloc(sizeof(dog_t));
-  if (dog == NULL)
-    {
-      return (NULL);
-    }
-
-  dog->name = _strdup(name);
-  if (name == NULL)
-    {
-      free(name);
-      return(NULL);
-    }
-
-  dog->owner = _strdup(owner);
-  if (owner == NULL)
-    {
-      free(owner);
-      return(NULL);
-    }
-  dog->age = age;
-
-  return (dog);
+dog_t *dog;
+dog = malloc(sizeof(dog_t));
+if (dog == NULL)
+{
+return (NULL);
+}
+dog->name = _strdup(name);
+if (name == NULL)
+{
+free(name);
+return (NULL);
+}
+dog->owner = _strdup(owner);
+if (owner == NULL)
+{
+free(owner);
+return (NULL);
+}
+dog->age = age;
+return (dog);
 }
