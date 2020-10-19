@@ -65,15 +65,15 @@ if (dog == NULL)
 return (NULL);
 }
 dog->name = _strdup(name);
-if (name == NULL)
+if (dog->name == NULL)
 {
-free(name);
+free(dog);
 return (NULL);
 }
 dog->owner = _strdup(owner);
-if (owner == NULL)
+if (dog->owner == NULL)
 {
-free(owner);
+free(dog);
 return (NULL);
 }
 dog->age = age;
