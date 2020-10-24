@@ -59,7 +59,7 @@ void print_all(const char * const format, ...)
   va_list arg;
   char *seperator;
 
-  pt types[] = {
+  pt options[] = {
     {"c", print_char},
     {"i", print_int},
     {"f", print_float},
@@ -74,7 +74,7 @@ void print_all(const char * const format, ...)
   while (format && format[i])
     {
       j = 0;
-      while (types[j].test != NULL)
+      while (options[j].test != NULL)
 	{
 	  if (format[i] == types[j].test[0])
 	    {
