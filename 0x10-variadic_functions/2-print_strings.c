@@ -5,30 +5,24 @@
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-  va_list lista;
-  unsigned int i = 0;
-  char *s;
-  if (separator == NULL)
-    separator = "";
+  unsigned int i;
+  va_list arg;
+  char *test;
 
-  va_start (lista, n);
-       while ( i < n - 1)
+  va_start(arg, n);
+
+  for (i = 0; i < n; i++)
+    {
+      test = va_arg(arg, char*);
+      if (test)
 	{
-	  s = va_arg(lista, char *); 
-     if (s != NULL)
-	{	 
-	  printf("%s%s", s, separator);
+	  printf("%s", test);
 	}
       else
-	printf ("(nil)%s", separator);
-      i++;  
-  }
-       s = va_arg(lista, char *);
-       if (s != NULL)
-	 {
-	   printf("%s\n", s);
-	 }
-       else
-	 printf ("(nil)\n");
-	  va_end (lista);
-     }
+	printf("(nil)");
+      if (separator != NULL && (i < (n - 1)))
+	printf("%s", separator);
+    }
+  va_end(arg);
+  printf("\n");
+}
