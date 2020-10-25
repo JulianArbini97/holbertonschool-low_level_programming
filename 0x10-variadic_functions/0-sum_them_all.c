@@ -19,9 +19,10 @@ if (n == 0)
 return (0);
 }
 
-for (i = 0; i < n; i++)
+while (i < n)
 {
 sum += va_arg(lista, int);
+i++;
 }
 va_end(lista);
 return (sum);
