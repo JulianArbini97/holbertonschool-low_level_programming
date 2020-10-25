@@ -12,7 +12,7 @@ void print_all(const char * const format, ...);
 
 
 /**
- * struct op - Short description
+ * struct pter - Short description
  * @test: First member
  * @printer: Second member
  * Description: Longer description
@@ -20,8 +20,8 @@ void print_all(const char * const format, ...);
 
 typedef struct pter
 {
-  char *test;
-  void (*printer)();
+char *test;
+void (*printer)();
 } pt;
 
 #endif
