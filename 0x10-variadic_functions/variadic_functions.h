@@ -10,10 +10,18 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
+
+/**
+ * struct pter - Short description
+ * @test: First member
+ * @printer: Second member
+ * Description: Longer description
+ */
+
 typedef struct pter
 {
-  char *test;
-  void (*printer)();
+char *test;
+void (*printer)();
 } pt;
 
 #endif
