@@ -1,0 +1,45 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include "lists.h"
+#include <string.h>
+
+/**
+ * add_node - function that prints all the elements of a list_t list
+ * @head: input header pointer
+ * @str: Input string value
+ * Return: address of the new element, or NULL if it failed
+ */
+
+list_t *add_node(list_t **head, const char *str)
+{
+
+list_t *new_first;
+
+new_first = malloc(sizeof(list_t));
+if (new_first == NULL)
+{
+return (NULL);
+}
+else
+{
+new_first->len = _strlen(str);
+new_first->str = strdup(str);
+new_first->next = *head;
+*head = new_first;
+return (new_first);
+}
+}
+
+/**
+ * _strlen - returns length of string
+ * @s: character of string
+ * Return: length of string
+ */
+
+int _strlen(const char *s)
+{
+int i;
+while (s[i] != 0)
+i++;
+return (i);
+}
