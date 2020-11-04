@@ -4,23 +4,23 @@
 #include <string.h>
 
 /**
- * add_node_end - function that adds a new node at the end of a list_t list
+ * pop_listint - function that adds a new node at the end of a list_t list
  * @head: input header pointer
- * @str: Input string value
  * Return: the address of the new element, or NULL if it failed
  */
 
 int pop_listint(listint_t **head)
 {
 
-  listint_t *tmp;
-  int data = *head;
+listint_t *tmp;
+int data;
 
-  if (*head == NULL)
-    return (NULL);
+if (*head == NULL)
+return (0);
 
-  data = tmp->n; 
-  *head = (*head)->next;
-  free(tmp);
-  return (data);
+tmp = *head;
+*head = (*head)->next;
+data = tmp->n;
+free(tmp);
+return (data);
 }
