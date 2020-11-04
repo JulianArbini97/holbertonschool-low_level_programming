@@ -15,9 +15,9 @@ if (head == NULL)
 return;
 while (*head != NULL)
 {
-new = *head;
+tmp = *head;
 *head = (**head).next;
-free(new);
+free(tmp);
 }
 head = NULL;
 }
