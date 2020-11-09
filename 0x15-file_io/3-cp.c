@@ -1,55 +1,59 @@
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "holberton.h"
 #include <unistd.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <fcntl.h>
 
 /**
- *main - Program that copies the content of a file into another file
- *@argv: input arguments
- *@argc: quantity of arguments
- *Return: nothing
+ * main - copies the content of a file to another file
+ * @ac: argument count
+ * @av: list of arguments
+ * Return: Always 0.
  */
-
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-
-int fd_source, fd_dest, fd_write, fd_read;
-char buff[1024];
+int fd_from, fd_to, rd = 1, wrt, cl;
+char *buffer;
 
 if (argc != 3)
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
+fd_from = open(argv[1], O_RDONLY);
 
-fd_source = open(argv[1], O_RDONLY);
-if (fd_source == -1)
+if (fd_from == -1)
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
 
-fd_dest = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-if (fd_dest == -1)
-dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]), exit(99);
-
-fd_read = fd_write = 1;
-
-while (fd_read)
+fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 00600 | 00060 | 00004);
+if (fd_to == -1)
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+buffer = malloc(sizeof(char) * 1024);
+if (buffer == NULL)
+return (0);
+while (rd > 0)
 {
-fd_read = read(fd_source, buff, 1024);
-if (fd_read == -1)
+rd = read(fd_from, buffer, 1024);
+if (rd == -1)
+{
+free(buffer);
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
-if (fd_read > 0)
+}
+if (rd > 0)
 {
-fd_write = write(fd_dest, buff, fd_read);
-if (fd_write == -1)
-dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]), exit(99);
+wrt = write(fd_to, buffer, rd);
+if (wrt == -1)
+{
+free(buffer);
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 }
 }
-fd_write = close(fd_source);
-if (fd_write == -1)
-dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_source), exit(100);
-
-fd_write = close(fd_dest);
-if (fd_write == -1)
-dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_dest), exit(100);
-
+}
+free(buffer);
+cl = close(fd_from);
+if (cl == -1)
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from), exit(100);
+cl = close(fd_to);
+if (cl == -1)
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to), exit(100);
 return (0);
 }
