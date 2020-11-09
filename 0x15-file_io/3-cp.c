@@ -8,8 +8,8 @@
 
 /**
  * main - copies the content of a file to another file
- * @ac: argument count
- * @av: list of arguments
+ * @argc: argument count
+ * @argv: list of arguments
  * Return: Always 0.
  */
 int main(int argc, char **argv)
@@ -20,10 +20,8 @@ char *buffer;
 if (argc != 3)
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 fd_from = open(argv[1], O_RDONLY);
-
 if (fd_from == -1)
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
-
 fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 00600 | 00060 | 00004);
 if (fd_to == -1)
 dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
