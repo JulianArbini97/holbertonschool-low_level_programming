@@ -31,7 +31,7 @@ dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]), exit(99);
 
 fd_read = fd_write = 1;
 
-while (fd_source)
+while (fd_read)
 {
 fd_read = read(fd_source, buff, 1024);
 if (fd_read == -1)
