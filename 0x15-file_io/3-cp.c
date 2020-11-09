@@ -37,11 +37,12 @@ fd_read = read(fd_source, buff, 1024);
 if (fd_read == -1)
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
 if (fd_read > 0)
+{
 fd_write = write(fd_dest, buff, fd_read);
 if (fd_write == -1)
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]), exit(99);
 }
-
+}
 fd_write = close(fd_source);
 if (fd_write == -1)
 dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_source), exit(100);
