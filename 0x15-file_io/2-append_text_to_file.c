@@ -23,7 +23,7 @@ int _strlen(char *s)
 }
 
 /**
- * create_file - function that create a file
+ * append_text_to_file - function that create a file
  * @filename: name of file to be created
  * @text_content: NULL terminated string to write to the file
  * Return: 1 on success, -1 on failure

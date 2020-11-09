@@ -26,12 +26,12 @@ if (filename == NULL)
 space = malloc(sizeof(char) * letters);
 
 if (space == NULL)
-	 return (0);
+	return (0);
 
 fd = open(filename, O_RDWR);
 	if (fd == -1)
 	{
-		free (space);
+		free(space);
 		return (0);
 
 	}
