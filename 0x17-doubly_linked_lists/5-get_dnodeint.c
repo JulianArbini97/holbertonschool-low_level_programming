@@ -12,3 +12,20 @@
 
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
+
+	dlistint_t *temporal;
+
+	if (head == NULL)
+	{
+		return (NULL);
+	}
+	else
+	{
+		temporal = *head;
+		while (temporal-> next != NULL)
+		{
+			temporal = temporal->next;
+		}
+	}
+	return (temporal);
+}
