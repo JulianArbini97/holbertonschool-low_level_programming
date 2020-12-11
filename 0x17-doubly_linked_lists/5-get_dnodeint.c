@@ -13,19 +13,18 @@
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 
-	dlistint_t *temporal;
+	dlistint_t *refer_node;
+	unsigned int counter = 0;
 
-	if (head == NULL)
+	refer_node = head;
+	while (refer_node != NULL && counter <= index)
 	{
-		return (NULL);
-	}
-	else
-	{
-		temporal = *head;
-		while (temporal-> next != NULL)
+		if (counter == index)
 		{
-			temporal = temporal->next;
+			return (refer_node);
 		}
+		refer_node = refer_node->next;
+		counter++;
 	}
-	return (temporal);
+	return (refer_node);
 }
