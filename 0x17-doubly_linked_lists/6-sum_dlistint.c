@@ -3,8 +3,8 @@
 #include "lists.h"
 
 /**
- * print_dlistint - function that prints all the elements of a dlistint_t list
- * @h: header pointer
+ * sum_dlistint - function that prints all the elements of a dlistint_t list
+ * @head: header pointer
  * Return: number of nodes
  */
 
@@ -18,9 +18,9 @@ int sum_dlistint(dlistint_t *head)
 		return (0);
 	}
 	while (head != NULL)
-		{
-			sum = sum + head->n;
-			head = head->next;
-		}
-	return(sum);
+	  {
+	    sum = sum + head->n;
+	    head = head->next;
+	  }
+	return (sum);
 }
