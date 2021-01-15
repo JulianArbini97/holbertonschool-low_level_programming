@@ -6,29 +6,30 @@
  * Return: Always EXIT_SUCCESS.
  */
 
- void hash_table_delete(hash_table_t *ht)
- {
-    unsigned int i;
-    hash_node_t *tmp, *freeable;
+void hash_table_delete(hash_table_t *ht)
+{
+unsigned long int i;
+hash_node_t *tmp, *freeable;
 
-    if (!ht)
-		return;
+if (!ht)
+return;
 
-    for (i = 0; i < ht->size; i++)
-    {
-        if (ht->array[i] != NULL)
-        {
-            tmp = ht->array[i];
-            while (tmp != NULL)
-            {
-            freeable = tmp;
-            tmp = tmp->next;
-            free(freeable->key);
-            free(freeable->value);
-            free(freeable);
-            }
-        }
-    }
-    free(ht->array);
-    free(ht);
- }
+for (i = 0; i < ht->size; i++)
+{
+if (ht->array[i] != NULL)
+{
+for (tmp = ht->array[i]; tmp;)
+{
+freeable = tmp;
+tmp = tmp->next;
+free(freeable->key);
+free(freeable->value);
+free(freeable);
+freeable = NULL;
+}
+}
+}
+free(ht->array);
+free(ht);
+ht = NULL;
+}
