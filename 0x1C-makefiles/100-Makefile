@@ -9,6 +9,12 @@ all: $(NAME)
 
 clean:
 	$(RM) -f *~ $(NAME)
+
+oclean:
+	$(RM) -f *.o
+
+fclean:
+	$(RM) -f *~ $(NAME)
 	$(RM) -f *.o
 
 $(NAME): $(OBJ)
