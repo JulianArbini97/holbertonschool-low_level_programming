@@ -15,7 +15,7 @@ oclean:
 
 fclean: clean oclean
 
-$(NAME): $(OBJ)
+$(NAME): m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 re: oclean all
