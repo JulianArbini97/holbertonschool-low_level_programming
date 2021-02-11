@@ -1,5 +1,5 @@
 CC=gcc
-SRC=$(wildcard *.c)
+SRC=main.c holberton.c
 OBJ=$(SRC:%.c=%.o)
 NAME=holberton
 RM=rm
@@ -8,16 +8,16 @@ CFLAGS=-Wall -Werror -Wextra -pedantic
 all: $(NAME)
 
 clean:
-        $(RM) -f *~ $(NAME)
+	$(RM) -f *~ $(NAME)
 
 oclean:
-        $(RM) -f *.o
+	$(RM) -f *.o
 
 fclean:
-        $(RM) -f *~ $(NAME)
-        $(RM) -f *.o
+	$(RM) -f *~ $(NAME)
+	$(RM) -f *.o
 
 $(NAME): $(OBJ)
-        $(CC) $(CFLAGS) $(OBJ) -o $@
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 re: oclean all
