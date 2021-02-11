@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Perimeter function"""
 
+
 def island_perimeter(grid):
     """ def """
     per = 0
@@ -28,3 +29,4 @@ def island_perimeter(grid):
                 elif grid[fila][celda + 1] != 1:
                     per = per + 1
     return per
+    
