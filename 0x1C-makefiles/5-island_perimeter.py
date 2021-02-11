@@ -2,6 +2,7 @@
 """ Perimeter function"""
 
 def island_perimeter(grid):
+    """ island perimeter """
     perimetro = 0;
     for fila in grid:
         for celda in fila:
