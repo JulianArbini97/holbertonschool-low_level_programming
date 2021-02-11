@@ -29,4 +29,3 @@ def island_perimeter(grid):
                 elif grid[fila][celda + 1] != 1:
                     per = per + 1
     return per
-    
