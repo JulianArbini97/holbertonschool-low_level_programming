@@ -34,12 +34,12 @@ int jump_search(int *array, size_t size, int value)
 	while(array[prev] <= value && prev < size)
 	{
 		printf("Value checked array[%li] = [%i]\n", prev, array[prev]);
-		prev++;
         if(array[prev] == value)
 	    {
 		printf("Value checked array[%li] = [%i]\n", prev, array[prev]);
 		return prev;
 	    }
+        prev++;
 	}
 
     return -1;
