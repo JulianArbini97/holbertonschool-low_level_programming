@@ -40,5 +40,9 @@ return (prev);
 }
 prev++;
 }
+if (array[prev] < value)
+{
+return (-1);
+}
 return (-1);
 }
